@@ -45,6 +45,11 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# Run the "bundle install" command to install the gems
+# Rubocop for Ruby
+# run rubocop -a to fix the errors
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
