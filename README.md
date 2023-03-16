@@ -15,11 +15,12 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
+    - [Install](#install)
     - [Usage](#usage)
+    - [Run Tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -68,14 +69,6 @@ This app allows you to make blog post and keep track of the likes and comments f
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-Not available yet
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -97,12 +90,24 @@ Clone this repository to your desired folder:
 
 cd my-folder
 git clone https://github.com/enoqueJonas/blog-app-ror/
+cd blog-app-ror
+
+### Install
+
+bundle install
+rails db:create
+rails db:migrate
 
 ### Usage
 
 To run the project, execute the following commands in your terminal:
 
 - Open your terminal and **rails server**
+
+### Run Tests
+
+rspec spec
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
