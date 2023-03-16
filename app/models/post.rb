@@ -19,3 +19,4 @@ class Post < ApplicationRecord
     user.update(post_counter: user.posts.count)
   end
 end
+
