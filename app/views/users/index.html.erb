@@ -1,5 +1,16 @@
+<head>
+    <%= javascript_include_tag 'views_script', defer: true%>
+</head>
 <ul>
   <% @users.each do |user| %>
-    <li><%= user.name %></li>
+    <li id = <%= user.id %> class = "user-card">
+        <a href = <%= "#{users_url}/#{user.id}"%>>
+            <img src = <%= user.photo %> alt="profile pic"/>
+            <div class="user-info">
+                <p> <%= user.name %> </p>
+                <p> Number of posts: <%= user.post_counter %> </p>
+            </div>
+        </a>
+    </li>
   <% end %>
 </ul>
