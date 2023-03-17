@@ -1,12 +1,13 @@
 <%= form_with model: post, url: user_posts_url, class: "form" do |form| %>
 <div class="form-items">
-    <%= form.label :title %>
+    <%= form.label :title %></br>
     <%= form.text_field :title %>
 </div>
 <div class="form-items">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.label :text %></br>
+    <%= form.text_area :text, size: "70x5" %>
 </div>
 <div class="btn-submit">
     <%= form.submit value="Post" %>
 </div>
+<% end %>
