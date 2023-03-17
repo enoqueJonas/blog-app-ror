@@ -5,7 +5,8 @@
     </div>
     <ul class="user-posts">
         <% @user.posts.each do |post| %>
-            <li>
+            <a href = <%= user_post_url(id: post.id) %>>
+                <li>
                 <h3> <%= post.title %></h3>
                 <p> <%= post.text %></p>
                 <div class="post-info">
@@ -19,6 +20,7 @@
                    <% end %>
                 </ul>
             </li>
+            </a>
         <% end %>
     </ul>
       <button>Pagination</button>
