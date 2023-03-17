@@ -1,1 +1,16 @@
-<h1> This Will display all users</h1>
+<head>
+    <%= javascript_include_tag 'user_index_script', defer: true%>
+</head>
+<ul>
+  <% @users.each do |user| %>
+    <li id = <%= user.id %> class = "user-card">
+        <a href = <%= "#{users_url}/#{user.id}"%>>
+            <img src = <%= user.photo %> alt="profile pic"/>
+            <div class="user-info">
+                <p> <%= user.name %> </p>
+                <p> Number of posts: <%= user.posts.count %> </p>
+            </div>
+        </a>
+    </li>
+  <% end %>
+</ul>
