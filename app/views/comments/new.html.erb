@@ -1,0 +1,12 @@
+<%= form_with model: @comment, url: user_post_comments_path do |form| %>
+
+<div>
+    <%= form.label :Comment %></br>
+    <%= form.text_area :text, size: "70x5" %>
+</div>
+
+<div>
+    <%= form.submit value="Comment" %>
+</div>
+
+<% end %>
