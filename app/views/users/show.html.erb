@@ -4,7 +4,8 @@
         <p> Number of posts: <%= @user.posts.count %> </p>
     </div>
     <div class="user-bio">
-        <%= @user.bio %>
+        <h3>Bio</h3>
+       <p> <%= @user.bio %> </p>
     </div>
     <ul class="user-posts">
         <% @user.posts.each do |post| %>
