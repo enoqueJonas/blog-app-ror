@@ -4,9 +4,9 @@ RSpec.describe 'PostIndex', type: :system do
   describe'post index page' do
     before(:each) do
       @author = User.create(name: 'Koami NOGBEDJI', photo: 'https://linktomyphoto.com/koami_profil', bio: 'my self')
-      @post = Post.create(title: 'post title', text: 'this is a text for the post',author_id: @author.id)
+      @post = Post.create(title: 'post title', text: 'this is a text for the post',user_id: @author.id)
       @comment = Comment.create(text: 'this is first a comment', user_id: @author.id, post_id: @post.id)
-       Like.create(author_id: @author.id, post_id: @post.id)
+      Like.create(user_id: @author.id, post_id: @post.id)
       visit user_posts_path(user_id: @author.id)
     end
 
