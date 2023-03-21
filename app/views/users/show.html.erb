@@ -1,5 +1,6 @@
 <div class="user-details">
     <div class="user-info">
+        <img src = <%= @user.photo %> alt="profile pic"/>
         <p> <%= @user.name %> </p>
         <p> Number of posts: <%= @user.posts.count %> </p>
     </div>
@@ -8,16 +9,18 @@
        <p> <%= @user.bio %> </p>
     </div>
     <ul class="user-posts">
-        <% @user.posts.each do |post| %>
-            <a href = <%= "#{user_posts_url(@user.id)}/#{post.id}" %>>
-                <li>
-                    <h3> <%= post.title %></h3>
-                    <p> <%= post.text %></p>
-                    <div class="post-info">
-                        Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
-                    </div>
-                </li>
-            </a>
+        <% @user.posts.each_with_index do |post, i| %>
+            <% if i < 3 %>
+                <a href = <%= "#{user_posts_url(@user.id)}/#{post.id}" %>>
+                    <li>
+                        <h3> <%= post.title %></h3>
+                        <p> <%= post.text %></p>
+                        <div class="post-info">
+                            Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+                        </div>
+                    </li>
+                </a>
+            <% end %>
         <% end %>
     </ul>
     <a href= <%= user_posts_path(user_id: @user.id) %>>
