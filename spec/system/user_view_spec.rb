@@ -20,5 +20,11 @@ RSpec.describe 'User view', type:feature do
         it 'should display the number of posts' do
             expect(page).to have_content("Number of posts: #{@user.posts.count}")
         end
+
+        it 'should redirect to user show page' do
+            click_link 'Enoque'
+
+            expect(page).to have_current_path "/users/#{@user.id}"
+        end
     end
 end
