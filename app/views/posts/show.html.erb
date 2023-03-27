@@ -7,7 +7,7 @@
         <%= @post.text%>
     </div>
     <ul class="post-comments">
-        <% @post.comments.each do |comment| %>
+       <% @post.comments.includes(:post).each do |comment| %>
         <li>
             <%= comment.text %>
         </li>
