@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User view', type: feature do
+RSpec.describe 'User view', type: :feature do
   before(:each) do
     @user = User.create(name: 'Enoque', photo: 'example.jpg', bio: 'my bio', post_counter: 4)
     @post = Post.create(title: 'Post title number 1', text: 'Post text', comments_counter: 1, likes_counter: 1,
